@@ -11,6 +11,12 @@
 
   <packaging>jar</packaging>
 
+  <name>RevApi HPI extractor</name>
+  <description>Extracts classes of Jenkins Plugin Archives so that these could be used in a RevApi analysis.
+  </description>
+
+  <!-- TODO: Move to jenkins org -->
+
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}.git</developerConnection>
