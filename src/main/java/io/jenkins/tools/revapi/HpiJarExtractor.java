@@ -41,7 +41,7 @@ public class HpiJarExtractor implements JarExtractor {
     public Optional<InputStream> extract(final Archive archive) {
         Matcher matcher = HPI_PATTERN.matcher(archive.getName());
         if (matcher.matches()) {
-            System.out.println("--- Extracting " + archive.getName());
+            System.out.println("--- Inspecting " + archive.getName());
 
             return extractJarFile(archive, matcher.group("artifactId"));
         }
