@@ -6,7 +6,9 @@
 This simple library is an extension of [Revapi](https://revapi.org) to extract Jenkins Plugin Archives (hpi files) 
 so that these could be used in a Revapi analysis.
 
-Usage:
+## Maven Usage
+
+Add the following snippet to your POM:
 
 ```
       ...
