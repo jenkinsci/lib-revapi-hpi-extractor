@@ -18,7 +18,7 @@ Usage:
           <dependency>
             <groupId>org.revapi</groupId>
             <artifactId>revapi-java</artifactId>
-            <version>0.19.0-SNAPSHOT</version>
+            <version>0.19.0</version>
           </dependency>
           <dependency>
             <groupId>io.jenkins.tool</groupId>
