@@ -5,17 +5,14 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.jenkins.tool</groupId>
+  <groupId>io.jenkins.tools</groupId>
   <artifactId>revapi-hpi-extractor</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <packaging>jar</packaging>
 
   <name>Revapi HPI extractor</name>
-  <description>Extracts classes of Jenkins Plugin Archives so that these could be used in a Revapi analysis.
-  </description>
-
-  <!-- TODO: Move to jenkins org -->
+  <description>Extracts classes of Jenkins Plugin Archives so that these could be used in a Revapi analysis.</description>
 
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}.git</connection>
