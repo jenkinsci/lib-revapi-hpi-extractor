@@ -22,6 +22,7 @@ import org.revapi.Archive;
 import org.revapi.java.spi.JarExtractor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import sun.rmi.runtime.Log;
 
 /**
  * If the provided archive is a Jenkins Plugin Archive (HPI file) then only those entries that are considered for API
@@ -41,7 +42,7 @@ public class HpiJarExtractor implements JarExtractor {
     public Optional<InputStream> extract(final Archive archive) {
         Matcher matcher = HPI_PATTERN.matcher(archive.getName());
         if (matcher.matches()) {
-            System.out.println("--- Inspecting " + archive.getName());
+            LOG.debug("Analyzing " + archive.getName());
 
             return extractJarFile(archive, matcher.group("artifactId"));
         }
@@ -81,7 +82,7 @@ public class HpiJarExtractor implements JarExtractor {
 
     private Optional<InputStream> extractPluginJar(final ZipInputStream hpiPluginArchive, final String name) {
         try {
-            System.out.println("--- Extracting " + name);
+            LOG.debug("--- Extracting classes of " + name + " to temporary archive.");
 
             byte[] buffer = new byte[2048];
 
